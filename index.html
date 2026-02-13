@@ -127,39 +127,42 @@
 
             h1 {
                 font-size: 2rem;
+                margin-bottom: 1rem;
             }
 
             .container {
-                padding: 1.5rem;
-                margin: 20px 0;
-                max-height: 90vh;
-                overflow-y: auto;
+                padding: 1.2rem;
+                margin: 10px;
+                max-height: none;
+                overflow-y: visible;
             }
 
             p {
-                font-size: 1rem;
+                font-size: 0.95rem;
+                margin-bottom: 0.8rem;
             }
 
             .btn {
-                padding: 14px 30px;
-                font-size: 1.1rem;
+                padding: 12px 28px;
+                font-size: 1rem;
                 width: 100%;
-                max-width: 250px;
+                max-width: 220px;
             }
 
             .gallery-grid {
                 grid-template-columns: repeat(2, 1fr);
-                gap: 15px;
+                gap: 12px;
                 max-width: 100%;
+                padding: 0 5px;
             }
 
             .photo-card {
-                aspect-ratio: 3/4;
+                height: 160px;
+                padding: 6px;
             }
 
-            .photo-card img {
-                width: 100%;
-                height: 100%;
+            .photo-card::before {
+                border: 2px solid #ff69b4;
             }
 
             .letter-content {
@@ -218,26 +221,28 @@
         .gallery-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
+            gap: 15px;
             margin-bottom: 25px;
             width: 100%;
-            max-width: 500px;
+            max-width: 450px;
+            padding: 0 10px;
         }
 
         .photo-card {
             background: white;
-            padding: 12px 12px 30px 12px;
-            border-radius: 3px;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+            padding: 8px;
+            border-radius: 4px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
             transform: rotate(-2deg);
             transition: all 0.4s ease;
             position: relative;
-            aspect-ratio: 3/4;
+            width: 100%;
+            height: 180px;
             overflow: hidden;
         }
 
         .photo-card:nth-child(1) {
-            transform: rotate(-3deg);
+            transform: rotate(-2.5deg);
         }
 
         .photo-card:nth-child(2) {
@@ -245,17 +250,30 @@
         }
 
         .photo-card:nth-child(3) {
-            transform: rotate(2.5deg);
+            transform: rotate(2deg);
         }
 
         .photo-card:nth-child(4) {
-            transform: rotate(-2.5deg);
+            transform: rotate(-2deg);
         }
 
         .photo-card:hover {
-            transform: scale(1.1) rotate(0deg);
+            transform: scale(1.05) rotate(0deg);
             z-index: 10;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .photo-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border: 3px solid #ff69b4;
+            border-radius: 2px;
+            pointer-events: none;
+            z-index: 2;
         }
 
         .photo-card img {
@@ -263,8 +281,9 @@
             height: 100%;
             object-fit: cover;
             object-position: center;
-            border-radius: 2px;
+            border-radius: 1px;
             cursor: pointer;
+            display: block;
         }
 
         .photo-placeholder {
@@ -12263,7 +12282,7 @@ C5vFjeJ0oSoKgNGNmgks1rMwvD0xkD+tidRjmwT8FlLjm9cRr3DuAnhBD4v//gADAP/Z')">
     <script>
         /* --- CONFIGURATION --- */
         // Customize your love letter here
-        const loveLetterText = "Dear Roruuu,\n\nYou know how in Friends, Ross says 'You're my lobster'? Well, you're MY lobster. You're my person, my best friend, my everything.\n\nFrom the moment I met you, my world transformed into something magical. Your smile lights up my darkest days, your laughter is the melody my heart dances to, and your presence makes every moment feel like home.\n\nI cherish every second we spend together - from our late-night talks to our silly inside jokes. You make the ordinary extraordinary, and you've shown me what true love really means.\n\nEvery day with you is a gift I never want to return. You're not just my Valentine... you're my forever.\n\nSo, I have a very important question for you...";
+        const loveLetterText = "My Dearest,\n\nYou know how in Friends, Ross says 'You're my lobster'? Well, you're MY lobster. You're my person, my best friend, my everything.\n\nFrom the moment I met you, my world transformed into something magical. Your smile lights up my darkest days, your laughter is the melody my heart dances to, and your presence makes every moment feel like home.\n\nI cherish every second we spend together - from our late-night talks to our silly inside jokes. You make the ordinary extraordinary, and you've shown me what true love really means.\n\nEvery day with you is a gift I never want to return. You're not just my Valentine... you're my forever.\n\nSo, I have a very important question for you...";
         /* --------------------- */
 
         // Particle System
